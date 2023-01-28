@@ -84,7 +84,7 @@ def insert_row_snowflake(new_fruit):
 
   
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
-if not fruit_choice:
+if not add_my_fruit:
   streamlit.error("please enter here.")
 else:
   insert_row_snowflake(add_my_fruit)
