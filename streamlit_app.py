@@ -87,6 +87,7 @@ add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 if not add_my_fruit:
   streamlit.error("please enter here.")
 else:
+  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
   insert_row_snowflake(add_my_fruit)
     
 #insert_row_snowflake(new_fruit)
